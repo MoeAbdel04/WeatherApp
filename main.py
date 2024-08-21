@@ -1,7 +1,17 @@
+import tkinter as tk
 # Main algorithm for the weather forecasting app Weather Forecasting App Features: Users can check the current
 # weather and forecast for their location. You could also add severe weather alerts. Learning Aspects: API
 # integration (like OpenWeatherMap). Data parsing and display. Implementing alerts and notifications. Timeframe: 2-3
 # weeks.
+
+# - - - - - - - - - - - - GUI weather app - - - - - - - - - - - - #
+# Use an API to take a city and a country name and get coordinates for it (in long and lat)
+screen = tk.Tk()
+screen.title("Weather App")
+screen.config(width=600, height=600)
+
+
+tk.mainloop()
 
 # Step 1: Graphical User interface (functionality for the buttons and windows) (using tkinter) Step 2: Use an
 # API to retrieve live global weather data (using OpenWeatherMap and pandas to format the information) Step 3: Alert

@@ -1,19 +1,17 @@
 from dotenv import load_dotenv
 import os
 import requests
-import json
+
+# - - - - - - - - - - - - Pulling API info - - - - - - - - - - - - #
 
 load_dotenv()
-weather_api_key = os.getenv("WEATHER_API_KEY")
-
 # Replace with your actual latitude, longitude, and API key
 lat = "25.7617"
 lon = "-80.1918"
-api_key = "your_api_key_here"
+weather_api_key = os.getenv("WEATHER_API_KEY")
 
 # Construct the full URL
 url = f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={weather_api_key}"
-
 # Send a GET request to the API
 response = requests.get(url)
 
@@ -28,6 +26,3 @@ if response.status_code == 200:
     print(f"Weather: {weather_description}")
 else:
     print(f"Error: {response.status_code}")
-
-
-
