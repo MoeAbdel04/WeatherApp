@@ -8,8 +8,16 @@ import tkinter as tk
 # Use an API to take a city and a country name and get coordinates for it (in long and lat)
 screen = tk.Tk()
 screen.title("Weather App")
-screen.config(width=600, height=600)
 
+main_image = tk.PhotoImage(file="icons/main_image.png")
+# Get image dimensions
+image_width = (main_image.width() // 3)
+image_height = (main_image.height() // 3)
+# create the image in the canvas
+canvas = tk.Canvas(width=image_width, height=image_height)
+canvas.create_image(image_width // 2, image_height // 2, image=main_image)
+
+canvas.pack()
 
 tk.mainloop()
 
